@@ -42,26 +42,14 @@ const questionsToDoctor: IQuestions[] = [
   },
 ];
 
-export default function ToDoctors() {
+export default function ToCompanions() {
   return (
     <section className="px-6 pt-6 lg:px-20 md:pt-32 lg:pt-16 xl:pb-4">
-      <div className="mb-16">
-        <h1 className="font-medium text-xl text-gray-dark pb-4 pl-4">
-          Nosso aplicativo
-        </h1>
-        <p className="text-secondary-gray pl-4 text-lg pr-20 md:text-xl ">
-          O Glicare é um aplicativo desenvolvido para simplificar o cuidado com
-          o diabetes. Pacientes, médicos, nutricionistas e outros profissionais
-          de saúde encontram aqui uma forma prática e acessível de acompanhar a
-          evolução da doença, monitorar sintomas e promover mais qualidade de
-          vida.
-        </p>
-      </div>
       <div className="bg-white rounded-3xl relative md:grid md:grid-cols-2">
         <span className="md:col-start-1"></span>
         <span className="hidden md:block md:absolute md:-top-8 md:left-16 md:mt-16 xl:mt-0">
           <Image
-            src={"/image/smartphone-left.png"}
+            src={"/image/companion-mockup.png"}
             width={365}
             height={692}
             alt="smartphone"

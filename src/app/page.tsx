@@ -1,12 +1,10 @@
 import About from "@/app/components/about";
 import CallToDownload from "@/app/components/call-to-download";
-import Contact from "@/app/components/contact";
 import ToDoctors from "@/app/components/to-doctors";
 import ToPacients from "@/app/components/to-pacients";
 import WhoAre from "@/app/components/who-are";
 import CallToDownloadSecondary from "@/app/components/call-to-download-secondary";
 import StoresDownload from "./components/stores-download";
-import FormularioPreCadastro from "./components/forms";
 //import AdBanner from "./components/ui/ad-banner";
 
 export default function Home() {
@@ -15,7 +13,6 @@ export default function Home() {
       <CallToDownload />
       <ToPacients />
       <ToDoctors />
-      <FormularioPreCadastro />
       {/* <AdBanner
         dataAdClient={process.env.NEXT_PUBLIC_PUBLISHER_ID!}
         dataAdSlot="5697690360"
@@ -24,7 +21,6 @@ export default function Home() {
       /> */}
       <CallToDownloadSecondary />
       <About />
-      <Contact />
       <WhoAre />
       <StoresDownload />
     </main>

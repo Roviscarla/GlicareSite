@@ -1,42 +1,91 @@
 import IconGlicare from "@/public/svg/icon-glicare-light";
+import IconPhone from "@/public/svg/icon-phone-white";
+import IconWhatsApp from "@/public/svg/icon-whatsapp-white";
+import IconEmail from "@/public/svg/icon-email-white";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-gray pl-6 md:grid md:grid-cols-2 md:grid-rows-[100px 50px 100px] md:pl-16">
-      <div className="flex items-center gap-x-5 pt-9 pb-10 pl-4 md:pb-0 md:pt-0 md:col-span-1 md:max-h-14 md:self-center">
-        <IconGlicare />
-        <p className="font-roboto font-semibold text-4xl md:text-5xl">
-          Glicare
-        </p>
+    <footer className="bg-dark-blue text-primary-gray px-6 py-8 md:px-16 md:py-12">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start">
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <IconGlicare />
+              <h2 className="font-roboto font-bold text-3xl md:text-4xl">
+                Glicare
+              </h2>
+            </div>
+
+            <p className="text-sm md:text-base leading-relaxed max-w-2xl">
+              O Glicare é um aplicativo dedicado a pacientes de diabetes,
+              médicos, nutricionistas e demais profissionais da saúde que
+              desejam maior simplicidade, praticidade e facilidade no
+              acompanhamento, controle e evolução da doença e sintomas.
+            </p>
+
+            <p className="text-sm pt-4">2025 © Glicare</p>
+          </div>
+
+          <div className="space-y-6 md:text-left">
+            <nav>
+              <ul className="flex flex-col gap-3 text-sm md:text-base">
+                <li>
+                  <a href="#app" className="hover:underline transition-all">
+                    Nosso aplicativo
+                  </a>
+                </li>
+                <li>
+                  <a href="#sobre" className="hover:underline transition-all">
+                    Sobre diabetes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#quem-somos"
+                    className="hover:underline transition-all"
+                  >
+                    Quem somos
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contatos"
+                    className="hover:underline transition-all"
+                  >
+                    Contatos
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div className="flex gap-4 md:justify-start">
+              <a
+                href="tel:+5500000000000"
+                className="hover:opacity-80 transition-opacity"
+                aria-label="Telefone"
+              >
+                <IconPhone className="w-5 h-5" />
+              </a>
+              <a
+                href="https://wa.me/5500000000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                aria-label="WhatsApp"
+              >
+                <IconWhatsApp className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:contato@glicare.com"
+                className="hover:opacity-80 transition-opacity"
+                aria-label="Email"
+              >
+                <IconEmail className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <ul className="flex flex-col gap-y-5 pb-16 pl-4 md:pl-0 font-medium max-w-40 md:col-span-1 md:row-span-2 md:justify-self-center md:pt-40">
-        <li>
-          <a href="#app">Nosso aplicativo</a>
-        </li>
-        <li>
-          <a href="#depoimentos">Depoimentos</a>
-        </li>
-        <li>
-          <a href="#sobre">Sobre diabetes</a>
-        </li>
-        <li>
-          <a href="#contatos">Contatos</a>
-        </li>
-        <li>
-          <a href="#quem-somos">Quem somos</a>
-        </li>
-      </ul>
-
-      <p className="pr-6 pb-12 pl-4 md:w-430 lg:w-700 md:col-span-1 md:pb-0 md:pr-20 md:row-span-1">
-        O Glicare é um aplicativo desenvolvido para simplificar o cuidado com o
-        diabetes. Pacientes, médicos, nutricionistas e outros profissionais de
-        saúde encontram aqui uma forma prática e acessível de acompanhar a
-        evolução da doença, monitorar sintomas e promover mais qualidade de
-        vida.
-      </p>
-
-      <p className="pb-24 pl-4 md:col-span-2 md:pb-11">2025 © Glicare</p>
     </footer>
   );
 }
