@@ -89,7 +89,7 @@ export default function NossoApp() {
                   Quer mais informações?
                 </p>
                 <Link
-                  href="/mais-informacoes"
+                  href="#"
                   className="text-dark-blue font-bold uppercase text-sm hover:underline inline-block"
                 >
                   SAIBA MAIS

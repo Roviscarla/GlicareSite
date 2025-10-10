@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react"; //
 
 import Image from "next/image";
 import ArrowNext from "@/app/components/ui/arrow-next";
@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import IconGithub from "@/public/svg/icon-github";
 import IconWeb from "@/public/svg/icon-web";
 import ICollaborators from "@/app/models/collaborators.interface";
+import FilterButton from "@/app/components/ui/filter-button";
 
 const collaborators: ICollaborators[] = [
   {
@@ -114,7 +115,7 @@ const collaborators: ICollaborators[] = [
   {
     id: 12,
     name: "Hendrick Menacho",
-    function: "Desenvolvedor FullStack",
+    function: "Desenvolvedor Front-end",
     linkedin: "https://www.linkedin.com/in/hendrickmenacho/",
     web: "https://github.com/hendrickm97",
     image: "/image/collaborators/hendrick-menacho.jpeg",
@@ -158,10 +159,19 @@ export default function WhoAre() {
     ],
   };
 
+  const filters = ["Todos", ...new Set(collaborators.map((c) => c.function))];
+  const [activeFilter, setActiveFilter] = useState("Todos");
+  const filteredCollaborators = collaborators.filter((collaborator) => {
+    if (activeFilter === "Todos") {
+      return true;
+    }
+    return collaborator.function === activeFilter;
+  });
+
   return (
     <section
       id="quem-somos"
-      className="bg-primary-gray max-w-full pb-20 lg:px-16 overflow-x-hidden"
+      className="mt-36 bg-primary-gray max-w-full pb-20 lg:px-16 overflow-x-hidden"
     >
       <div className="px-6">
         <h2 className="text-gray-dark pl-4 text-2xl md:text-28 lg:text-28 font-medium">
@@ -183,9 +193,20 @@ export default function WhoAre() {
         </p>
       </div>
 
+      <div className="flex flex-wrap gap-3 mt-12 px-6 lg:px-24 justify-center">
+        {filters.map((filter) => (
+          <FilterButton
+            key={filter}
+            label={filter}
+            isActive={activeFilter === filter}
+            onClick={() => setActiveFilter(filter)}
+          />
+        ))}
+      </div>
+
       <div className="w-full mt-8 lg:mt-16 lg:px-20">
-        <Slider {...settings}>
-          {collaborators.map((collaborator) => (
+        <Slider {...settings} key={activeFilter}>
+          {filteredCollaborators.map((collaborator) => (
             <div key={collaborator.id} className="mt-6">
               <div className="flex items-center justify-center">
                 <div className="relative w-148 h-148">
@@ -205,7 +226,6 @@ export default function WhoAre() {
                 <span className="inline-block xl:hidden">
                   {collaborator.name.split(" ").slice(1).join(" ")}
                 </span>
-
                 <span className="hidden xl:inline-block">
                   {collaborator.name}
                 </span>

@@ -1,9 +1,9 @@
-import About from "../components/about";
+import AboutDiabetes from "../components/about-diabetes";
 
 export default function SobreDiabetes() {
   return (
     <main>
-      <About />
+      <AboutDiabetes />
     </main>
   );
 }
