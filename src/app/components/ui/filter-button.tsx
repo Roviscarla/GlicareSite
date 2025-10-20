@@ -2,8 +2,8 @@ import React from "react";
 
 type FilterButtonProps = {
   label: string;
-  onClick: () => void;
-  isActive: boolean;
+  onClick?: () => void;
+  isActive?: boolean;
 };
 
 const FilterButton: React.FC<FilterButtonProps> = ({

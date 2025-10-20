@@ -1,8 +1,8 @@
 "use client";
 
-import IconPlayStore from "@/public/svg/icon-play-store";
+import IconPlayStore from "@/public/svg/icon-play-store-new-white";
 import Button from "@/app/components/ui/button";
-import IconAppleStore from "@/public/svg/icon-apple-store";
+import IconAppleStore from "@/public/svg/icon-apple-store-new-white";
 import Image from "next/image";
 import ModalWarning from "./ui/modal-warning";
 import { useState } from "react";
@@ -47,7 +47,7 @@ export default function CallToDownload() {
                 <p className="font-medium text-xl lg:text-center xl:text-center">
                   Baixe o Glicare agora e transforme sua saúde!
                 </p>
-                <div className="flex gap-8 lg:justify-center xl:justify-start">
+                <div className="flex gap-2 lg:justify-center xl:justify-start">
                   <a
                     className="pb-8 xl:pb-0 transition-transform duration-200 ease-out hover:scale-110"
                     //href="https://play.google.com/store"
