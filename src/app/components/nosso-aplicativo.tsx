@@ -8,6 +8,7 @@ import IconPlayStore from "@/public/svg/icon-play-store-silver";
 import IconAppleStore from "@/public/svg/icon-apple-store-silver";
 import { useState } from "react";
 import ModalWarning from "./ui/modal-warning";
+import Button from "./ui/button";
 
 export default function NossoApp() {
   const [showModal, setShowModal] = useState(false);
@@ -40,7 +41,7 @@ export default function NossoApp() {
                 Baixe o nosso App
               </h3>
 
-              <div className="flex gap-4">
+              <div className="hidden lg:flex flex gap-4">
                 <button
                   className="transition-transform duration-200 ease-out hover:scale-105"
                   onClick={openModal}
@@ -55,6 +56,14 @@ export default function NossoApp() {
                 >
                   <IconAppleStore />
                 </button>
+              </div>
+              <div className="lg:hidden pb-10">
+                <Button
+                  onClick={openModal}
+                  classAttributes="bg-primary w-full hover:bg-blue-700 "
+                >
+                  Baixe o Glicare
+                </Button>
               </div>
             </div>
 

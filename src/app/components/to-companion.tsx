@@ -49,7 +49,7 @@ export default function ToCompanions() {
         <span className="md:col-start-1"></span>
         <span className="hidden md:block md:absolute md:-top-8 md:left-16 md:mt-16 xl:mt-0">
           <Image
-            src={"/image/companion-mockup.png"}
+            src={"/image/glicareAppImage.png"}
             width={365}
             height={692}
             alt="smartphone"
@@ -60,7 +60,7 @@ export default function ToCompanions() {
         <div className="lg:pr-2">
           <div className="pt-6 pl-6 pb-9 pr-14">
             <h2 className="font-medium text-2xl text-primary pb-4">
-              Para profissionais da saúde
+              Para Acompanhantes
             </h2>
             <p className="text-secondary-gray pr-8 md:pr-4">
               O Glicare foi desenvolvido para{" "}

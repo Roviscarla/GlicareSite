@@ -46,7 +46,11 @@ export default function Header() {
           </Button>
           <ul className="hidden xl:flex justify-around text-gray gap-12 font-inter font-medium text-base list-none px-18">
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive =
+                pathname === item.href ||
+                (item.href === "/sobre-diabetes" &&
+                  pathname.startsWith("/sobre-diabetes/"));
+
               return (
                 <li key={item.href} className="hover:text-blue-500">
                   <Link
@@ -85,7 +89,11 @@ export default function Header() {
               }`}
           >
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive =
+                pathname === item.href ||
+                (item.href === "/sobre-diabetes" &&
+                  pathname.startsWith("/sobre-diabetes/"));
+
               return (
                 <Link
                   key={item.href}

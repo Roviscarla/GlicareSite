@@ -123,12 +123,13 @@ const diabetesContent: { [key: string]: DiabetesContent } = {
   },
 };
 
-export default function DiabetesTypePage({
+export default async function DiabetesTypePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const content = diabetesContent[params.slug];
+  const { slug } = await params;
+  const content = diabetesContent[slug];
 
   if (!content) {
     return (
