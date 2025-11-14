@@ -1,4 +1,4 @@
-import { TimeGlicare } from "./components/glicare-team";
+
 import NossoApp from "./components/nosso-aplicativo";
 import { ResumoDiabetes } from "./components/sobre-diabetes";
 import YouTubeVideoCarousel from "./components/ui/youtube-carousel";
@@ -35,7 +35,7 @@ export default function Home() {
         //linkText="Clique Aqui"
         //playlistUrl="https://www.youtube.com/playlist?list=SUA_PLAYLIST_ID_AQUI"
       />
-      <TimeGlicare />
+  
     </main>
   );
 }

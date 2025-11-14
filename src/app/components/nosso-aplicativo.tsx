@@ -69,12 +69,11 @@ export default function NossoApp() {
 
             <div className="max-w-2xl">
               <h2 className="text-lg font-bold text-dark-blue mb-4">
-                Nosso Aplicativo
+               Você pode acompanhar o Glicare
               </h2>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                Com o nosso app você tem na palma da sua mão uma forma de
-                controlar a sua glicose e com o doutor Glico fazendo o auxílio
-                necessário.
+                O Glicare nasceu de um time ágil, formado por profissionais de produto, design e tecnologia com um propósito em comum: facilitar o acompanhamento da glicose e promover mais qualidade de vida para pessoas com diabetes.
+                Durante nossa Lean Inception, definimos o MVP com foco total no usuário, construindo uma solução baseada em pesquisa, empatia e colaboração.
               </p>
 
               <h3 className="text-lg font-bold text-dark-blue mb-4">

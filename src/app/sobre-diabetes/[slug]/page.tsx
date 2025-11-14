@@ -34,6 +34,8 @@ const diabetesContent: { [key: string]: DiabetesContent } = {
         "Vontade de urinar várias vezes ao dia",
         "Perda de peso sem motivo aparente",
         "Cansaço e irritabilidade",
+        "Fome e sede",
+    
       ],
     },
     hasCure: {

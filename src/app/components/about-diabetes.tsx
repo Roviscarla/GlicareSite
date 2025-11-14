@@ -64,16 +64,28 @@ const AboutDiabetes = () => {
           <div className="bg-header-background rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm">
             <div className="flex-1 text-center md:text-left">
               <h3 className="text-xl font-bold text-dark-blue mb-2">
-                Quer Saber mais de forma simples e rápida?
+                Conhece o canal Nunca Vi 1 Cientista?
               </h3>
               <p className="text-lg font-semibold text-text-gray mb-4">
-                Confira o Canal Nunca Vi 1 Cientista
+                                Inspirando Ciência e Combatendo a Desinformação
               </p>
               <p className="text-text-gray md:w-3/4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae sint ab nobis vitae earum necessitatibus commodi
-                obcaecati. Veniam inventore illum enim maxime culpa? Autem
-                officiis mollitia debitis perspiciatis nihil facilis.
+                As cientistas Laura Marise e Ana Bonassa são as criadoras do projeto Nunca Vi 1 Cientista, uma iniciativa que leva informação científica de forma acessível, divertida e confiável.
+                
+              </p>
+              <p className="text-text-gray md:w-3/4">
+                O canal nasceu em 2018, após as duas se conhecerem em uma competição de comunicação científica, e desde então vem se destacando por combater a desinformação na internet, especialmente sobre temas ligados à saúde e biologia.
+
+              </p>
+              <p className="text-text-gray md:w-3/4">
+                Laura Marise é farmacêutica-bioquímica, com mestrado e doutorado em Biociências e Biotecnologia Aplicadas à Farmácia pela Unesp.
+                Ana Bonassa é bióloga, com mestrado e doutorado em Fisiologia Humana pela USP.
+                De onde surgiu a Parceria?
+                Durante nossas pesquisas com usuários, percebemos que muitas pessoas relatam dificuldade em encontrar informações reais e seguras sobre diabetes.
+                Por isso, convidamos Laura e Ana para disponibilizarem vídeos do Canal Nunca Vi 1 Cientista aqui no Glicare, na área de Conteúdo Confiável.
+                Essa parceria tem como objetivo levar informação de qualidade, baseada em ciência, para ajudar quem vive com diabetes a se informar de forma clara, confiável e segura.
+
+
               </p>
             </div>
             <div className="flex flex-col items-center flex-shrink-0">

@@ -12,7 +12,7 @@ const questionsToDoctor: IQuestions[] = [
   {
     question: "🔔 Alertas Personalizados",
     response:
-      "Envie lembretes automaticos para seus pacientes sobre medicamentos, exames ou consultas.",
+      "Personalize lembretes para seus pacientes sobre medicamentos, exames ou consultas.",
     id: 2,
   },
   {
