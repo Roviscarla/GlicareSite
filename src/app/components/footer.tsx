@@ -22,6 +22,18 @@ export default function Footer() {
               desejam maior simplicidade, praticidade e facilidade no
               acompanhamento, controle e evolução da doença e sintomas.
             </p>
+            <p className="text-sm md:text-base leading-relaxed max-w-2xl">
+              Informações baseadas nas diretrizes do{" "}
+              <a
+                href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/diabetes"
+                target="_blank"
+                rel="noopener
+                     noreferrer"
+                className="hover:underline"
+              >
+                Ministério da Saúde
+              </a>
+            </p>
 
             <p className="text-sm pt-4">2025 © Glicare</p>
           </div>

@@ -3,12 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import appMockup from "@/public/image/glico-home-section.png";
+import appMockup from "@/public/image/Home-glico.png";
 import IconPlayStore from "@/public/svg/icon-play-store-silver";
 import IconAppleStore from "@/public/svg/icon-apple-store-silver";
 import { useState } from "react";
 import ModalWarning from "./ui/modal-warning";
 import Button from "./ui/button";
+import StoreButtonsDark from "./ui/store-buttons";
 
 export default function NossoApp() {
   const [showModal, setShowModal] = useState(false);
@@ -23,10 +24,11 @@ export default function NossoApp() {
         isOpen={showModal}
         onClose={closeModal}
       />
-      <section className="bg-gray-100 pt-16 ">
+
+      <section className="bg-gray-100 pt-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
-            <div className="flex flex-col items-center lg:items-center">
+            <div className="flex flex-col items-center">
               <div className="mb-8 mt-16">
                 <Image
                   src={appMockup}
@@ -41,7 +43,7 @@ export default function NossoApp() {
                 Baixe o nosso App
               </h3>
 
-              <div className="hidden lg:flex flex gap-4">
+              <div className="hidden lg:flex gap-4">
                 <button
                   className="transition-transform duration-200 ease-out hover:scale-105"
                   onClick={openModal}
@@ -57,10 +59,11 @@ export default function NossoApp() {
                   <IconAppleStore />
                 </button>
               </div>
-              <div className="lg:hidden pb-10">
+
+              <div className="lg:hidden pb-10 w-full">
                 <Button
                   onClick={openModal}
-                  classAttributes="bg-primary w-full hover:bg-blue-700 "
+                  classAttributes="bg-primary w-full hover:bg-blue-700"
                 >
                   Baixe o Glicare
                 </Button>
@@ -69,27 +72,29 @@ export default function NossoApp() {
 
             <div className="max-w-2xl">
               <h2 className="text-lg font-bold text-dark-blue mb-4">
-               Você pode acompanhar o Glicare
+                Nosso Aplicativo
               </h2>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                O Glicare nasceu de um time ágil, formado por profissionais de produto, design e tecnologia com um propósito em comum: facilitar o acompanhamento da glicose e promover mais qualidade de vida para pessoas com diabetes.
-                Durante nossa Lean Inception, definimos o MVP com foco total no usuário, construindo uma solução baseada em pesquisa, empatia e colaboração.
+                Com o nosso app você tem na palma da sua mão uma forma de
+                controlar a sua glicose e com o Dr. Glico fazendo o auxílio
+                necessário.
               </p>
 
               <h3 className="text-lg font-bold text-dark-blue mb-4">
-                Precisa fazer o controle de dependentes?
+                Gerencie facilmente seus dependentes!
               </h3>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                No app você também pode cadastrar dependentes tendo o total
-                controle, com alertas personalizados.
+                Em nosso app você realizar o cadastro de seus dependentes de
+                forma simples
               </p>
 
               <h3 className="text-lg font-bold text-dark-blue mb-4">
-                Leve de forma fácil suas medições a médicos responsáveis
+                Receba dicas do Dr. Glico
               </h3>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                No app suas anotações ficam ajustadas de forma simples podendo
-                ser exportadas para monitoramento médico.
+                Primeiro tirar a parte de depoimentos, e colocar uma parte do
+                que os médicos consultores estão dizendo, e fazer uma wishlist
+                para pessoa colocar e-mail para quando for lançado o app
               </p>
 
               <div className="text-center mt-8">
@@ -104,6 +109,162 @@ export default function NossoApp() {
                 </Link>
               </div>
             </div>
+          </div>
+          <h3 className="mt-12 text-3xl font-bold text-center text-dark-blue mb-4 max-w-[1024px] mx-auto">
+            Nossa Jornada: A Comunidade Glicare
+          </h3>
+
+          <div className="bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto mb-8">
+            <div className="flex-1 text-center md:text-left">
+              <p className="text-text-gray mb-4 text-base">
+                O Glicare nasceu da união de um time ágil, o Time Eclipse, e a
+                missão de transformar o controle do diabetes em uma jornada mais
+                leve, segura e eficiente. Não criamos apenas um app; criamos uma
+                comunidade baseada em empatia e dados reais.
+              </p>
+            </div>
+          </div>
+          <h3 className="mt-12 text-3xl font-bold text-center text-dark-blue mb-4 max-w-[1024px] mx-auto">
+            Lean Inception em Ação
+          </h3>
+
+          <div className="bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto mb-8">
+            <div className="flex-1 text-center md:text-left">
+              <p className="text-text-gray mb-4 text-base">
+                Do Conceito ao MVP: Para garantir que o Glicare entregasse valor
+                real desde o início, Nosso time realizou a Lean Inception. na
+                descoberta, definimos a Visão do Produto e o que ele é, não é,
+                faz e não faz.
+              </p>
+              <p className="text-text-gray mb-4 text-base">
+                Esse processo não apenas alinhou a equipe, mas nos permitiu
+                criar um MVP (Produto Mínimo Viável) focado na essência da sua
+                necessidade.
+              </p>
+            </div>
+          </div>
+          <div className="max-w-5xl mx-auto px-4 mt-12">
+            <h2 className="text-3xl font-bold text-dark-blue text-center mb-8">
+              Pesquisa com Usuários e Profissionais
+            </h2>
+            <p className="text-lg font-semibold text-center text-text-gray mb-4">
+              Criamos o Glicare e nossos times de Produto e UX foram a campo
+              para ouvir:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-header-background rounded-xl shadow-md p-6 flex flex-col items-center text-center">
+                <h3 className="text-xl font-bold text-dark-blue mb-2">
+                  Pessoas com Diabetes
+                </h3>
+                <p className="text-text-gray text-sm">
+                  Para entender a rotina, as dores diárias e o que realmente
+                  faria a diferença no controle glicêmico.
+                </p>
+              </div>
+
+              <div className="bg-header-background rounded-xl shadow-md p-6 flex flex-col items-center text-center">
+                <h3 className="text-xl font-bold text-dark-blue mb-2">
+                  Profissionais de Saúde
+                </h3>
+                <p className="text-text-gray text-sm">
+                  Para garantir que as funcionalidades tivessem embasamento
+                  clínico e atendessem às necessidades de monitoramento médico.
+                </p>
+              </div>
+            </div>
+            <div className="bg-header-background rounded-xl p-6 sm:p-8 shadow-lg max-w-[1024px] mx-auto mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8">
+                <div>
+                  <h3 className="text-dark-blue font-semibold mb-4">
+                    Problema Identificado na Pesquisa
+                  </h3>
+
+                  <ol className="list-decimal list-inside text-text-gray space-y-3">
+                    <li>
+                      <strong>
+                        Dificuldade em manter um histórico organizado
+                      </strong>{" "}
+                      para levar ao médico.
+                    </li>
+                    <li>
+                      <strong>Preocupação constante com familiares</strong> ou
+                      dependentes que têm diabetes.
+                    </li>
+                    <li>
+                      <strong>Medo de hipoglicemia noturna</strong> e
+                      esquecimento de medições.
+                    </li>
+                  </ol>
+                </div>
+
+                <div>
+                  <h3 className="text-dark-blue font-semibold mb-4">
+                    Funcionalidade / Destaque Glicare
+                  </h3>
+
+                  <div className="space-y-4 text-text-gray">
+                    <p>
+                      <strong>Relatórios Prontos:</strong> 85% dos usuários
+                      destacaram a necessidade de exportação fácil para
+                      monitoramento médico.
+                    </p>
+
+                    <p>
+                      <strong>Controle de Dependentes:</strong> Desenvolvemos
+                      alertas e total controle para garantir tranquilidade a
+                      quem cuida.
+                    </p>
+
+                    <p>
+                      <strong>Alertas Personalizados:</strong> O app te lembra
+                      no momento certo, combatendo o esquecimento, principal
+                      desafio na rotina.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 className="mt-12 text-3xl font-bold text-center text-dark-blue mb-4 max-w-[1024px] mx-auto">
+            Criado por Quem Entende, Para Quem Precisa
+          </h3>
+
+          <div className="bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto mb-8">
+            <div className="flex-1 text-center md:text-left">
+              <p className="text-text-gray mb-4 text-base">
+                O Glicare nasceu da união de um time ágil, o Time Eclipse, e a
+                missão de transformar o controle do diabetes. Não criamos apenas
+                um app, criamos uma comunidade baseada em empatia e dados reais.
+              </p>
+              <p className="text-text-gray mb-4 text-base">
+                Nossos times de Produto e UX ouviram ativamente pessoas com
+                diabetes e profissionais de saúde para mapear as funcionalidades
+                essenciais. A Lean Inception garantiu que o produto resolvesse
+                os problemas mais urgentes da sua rotina.
+              </p>
+              <p className="text-text-gray mb-4 text-base">
+                Com o Glicare, você tem o controle na palma da mão, pronto para
+                exportar e levar ao seu médico. Alertas personalizados que
+                combatem o esquecimento das medições. Controle total de
+                dependentes para garantir tranquilidade a quem cuida.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center px-9 text-center">
+            <Image
+              src={"/image/Glicare-Logotipo.png"}
+              alt="Glicare Logotipo"
+              width={330}
+              height={330}
+              className="aspect-circle pt-10 object-contain"
+              priority
+            />
+            <p className="font-inter text-2xl font-medium text-primary py-8 lg:pt-10">
+              Baixe o Glicare agora e transforme sua saúde!
+            </p>
+          </div>
+          <div className="flex gap-6 justify-center px-6 pb-6  ">
+            <StoreButtonsDark className="justify-center px-6 pb-6 " />
           </div>
         </div>
       </section>
