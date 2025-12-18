@@ -48,7 +48,7 @@ const YouTubeVideoCarousel: React.FC<YouTubeVideoCarouselProps> = ({
   return (
     <div className="py-8  text-center">
       {title && (
-        <h3 className="text-lg font-semibold text-text-gray mb-6">{title}</h3>
+        <h3 className="text-xl font-semibold text-text-gray mb-6">{title}</h3>
       )}
 
       <div className="max-w-6xl mx-auto px-4">

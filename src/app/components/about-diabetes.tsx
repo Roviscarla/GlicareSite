@@ -84,12 +84,12 @@ const AboutDiabetes = () => {
           })}
         </div>
         <div className="mt-8 mb-8">
-          <h3 className="text-3xl font-bold text-dark-blue mb-4 max-w-[1024px] mx-auto">
-            O que é diabetes?
-          </h3>
           <div className="bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto">
             <div className="flex-1 text-center md:text-left">
-              <p className="text-text-gray mb-4 text-base">
+              <h3 className="text-3xl font-bold text-dark-blue mb-4 max-w-[1024px] mx-auto">
+                O que é diabetes?
+              </h3>
+              <p className="text-text-gray mb-4 text-lg mt-8">
                 O<span className="font-bold"> diabetes</span> é uma{" "}
                 <span className="font-bold"> condição crônica</span> que ocorre
                 quando o nível de{" "}
@@ -104,46 +104,85 @@ const AboutDiabetes = () => {
                 . A insulina é um hormônio produzido pelo pâncreas, que ajuda a
                 glicose a entrar nas células para ser usada como energia.
               </p>
-              <p className="text-text-gray mb-4 text-base">
+              <p className="text-text-gray mb-4 text-lg">
                 Sem insulina suficiente ou se ela não funcionar bem, a glicose
                 se acumula no sangue, causando o que chamamos de hiperglicemia.
               </p>
-              <p className="text-text-gray mb-4 text-base">
+              <p className="text-text-gray mb-4 text-lg">
                 Hiperglicemia é o resultado do acúmulo de glicose no sangue
                 devido à deficiência ou mau funcionamento da insulina. Sem o
                 controle adequado, esta condição crônica pode desencadear
                 complicações de saúde a longo prazo.
               </p>
+              <h3 className="text-xl font-semibold text-text-gray mb-4">
+                Pré-diabetes
+              </h3>
+              <p className="text-text-gray mb-4 text-lg">
+                É quando os níveis de glicose no sangue estão mais altos do que
+                o normal, mas ainda não estão elevados o suficiente para
+                caracterizar um Diabetes Tipo 1 ou Tipo 2. É um sinal de alerta
+                do corpo, que normalmente aparece em obesos, hipertensos e/ou
+                pessoas com alterações nos lipídios.
+              </p>
+              <p className="mt-8 text-sm md:text-base font-bold leading-relaxed max-w-2xl italic">
+                Informações baseadas nas diretrizes do{" "}
+                <a
+                  href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/diabetes"
+                  target="_blank"
+                  rel="noopener
+                     noreferrer"
+                  className="hover:underline text-dark-blue"
+                >
+                  Ministério da Saúde
+                </a>
+              </p>
             </div>
           </div>
         </div>
-        <h3 className="text-3xl font-bold text-dark-blue mb-4 max-w-[1024px] mx-auto">
-          Pré-diabetes
-        </h3>
 
-        <div className="bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto">
-          <div className="flex-1 text-center md:text-left">
-            <p className="text-text-gray mb-4 text-base">
-              É quando os níveis de glicose no sangue estão mais altos do que o
-              normal, mas ainda não estão elevados o suficiente para
-              caracterizar um Diabetes Tipo 1 ou Tipo 2. É um sinal de alerta do
-              corpo, que normalmente aparece em obesos, hipertensos e/ou pessoas
-              com alterações nos lipídios.
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold text-dark-blue text-left mb-8">
+            Ciência e Cuidado: Uma Parceria pela Sua Saúde
+          </h2>
+          <p className="text-xl font-bold text-left text-text-gray mb-8">
+            Onde a tecnologia do Glicare encontra o canal do Nunca Vi 1
+            Cientista.
+          </p>
+          <h3 className="text-3xl font-bold text-left text-dark-blue mb-4 max-w-[1024px] mx-auto mt-8">
+            De onde vem a parceria?
+          </h3>
+          <div className="mt-8 flex-1 text-left md:text-left">
+            <p className="text-text-gray mb-4 text-lg">
+              Durante nossas pesquisas com usuários,{" "}
+              <span className="font-bold">
+                percebemos que muitas pessoas relatam dificuldade em encontrar
+                informações reais e seguras sobre diabetes.
+              </span>
+            </p>
+            <p className="text-text-gray mb-4 text-lg">
+              Por isso, convidamos Laura e Ana para disponibilizarem{" "}
+              <span className="font-bold">
+                vídeos do Canal Nunca Vi 1 Cientista aqui no Glicare
+              </span>
+              , na área{" "}
+              <span className="font-bold">de Conteúdo Confiável.</span>
+            </p>
+            <p className="text-text-gray mb-4 text-lg">
+              Essa parceria tem como objetivo levar informação de qualidade,
+              baseada em ciência, para ajudar quem vive com diabetes a se
+              informar de forma clara, confiável e segura.
             </p>
           </div>
-        </div>
-
-        <div className="mt-8">
-          <div className="bg-header-background rounded-xl p-6 sm:p-8 flex flex-col-reverse md:flex-row items-center gap-6 md:gap-12 shadow-lg">
+          <div className="mt-12 bg-header-background rounded-xl p-6 sm:p-8 flex flex-col-reverse md:flex-row items-center gap-6 md:gap-12 shadow-lg">
             <div className="flex-1 text-center md:text-left">
-              <h3 className="text-xl font-bold text-dark-blue mb-2">
+              <h3 className="text-2xl font-bold text-dark-blue mb-2">
                 Conhece o canal Nunca Vi 1 Cientista?
               </h3>
               <p className="text-lg font-semibold text-text-gray mb-4">
                 Inspirando Ciência e Combatendo a Desinformação
               </p>
 
-              <p className="text-text-gray mb-4 text-base">
+              <p className="text-text-gray mb-4 text-lg">
                 As cientistas <span className="font-bold">Laura Marise</span> e
                 <span className="font-bold"> Ana Bonassa</span> são as criadoras
                 do projeto{" "}
@@ -151,7 +190,7 @@ const AboutDiabetes = () => {
                 iniciativa que leva informação científica de forma acessível,
                 divertida e confiável.
               </p>
-              <p className="text-text-gray mb-4 text-base">
+              <p className="text-text-gray mb-4 text-lg">
                 O canal nasceu em <span className="font-bold">2018</span>, após
                 as duas se conhecerem em uma competição de comunicação
                 científica, e desde então vem se destacando por{" "}
@@ -173,13 +212,19 @@ const AboutDiabetes = () => {
                 />
               </div>
               <Button classAttributes="font-semibold text-md mt-6 rounded-lg w-48 bg-dark-blue text-white hover:bg-blue-700 transition duration-200">
-                <span>Visitar Canal</span>
+                <Link
+                  href="https://www.youtube.com/channel/UCdKJlY5eAoSumIlcOcYxIGg/join"
+                  target="_blank"
+                  className="text-white font-bold uppercase text-sm hover:underline inline-block"
+                >
+                  <span>Visitar Canal</span>
+                </Link>
               </Button>
             </div>
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 mt-12">
+        <div className="max-w-5xl mx-auto px-4 mt-12 mb-12">
           <h2 className="text-3xl font-bold text-dark-blue text-center mb-8">
             Quem são as cientistas
           </h2>
@@ -197,7 +242,7 @@ const AboutDiabetes = () => {
               <h3 className="text-xl font-bold text-dark-blue mb-2">
                 Ana Bonassa
               </h3>
-              <p className="text-text-gray text-sm">
+              <p className="text-text-gray text-lg">
                 Bióloga, com mestrado e doutorado em Fisiologia Humana pela USP.
               </p>
             </div>
@@ -214,39 +259,11 @@ const AboutDiabetes = () => {
               <h3 className="text-xl font-bold text-dark-blue mb-2">
                 Laura Marise
               </h3>
-              <p className="text-text-gray text-sm">
+              <p className="text-text-gray text-lg">
                 Farmacêutica-bioquímica, com mestrado e doutorado em Biociências
                 e Biotecnologia Aplicadas à Farmácia pela Unesp.
               </p>
             </div>
-          </div>
-        </div>
-        <h3 className="text-3xl font-bold text-center text-dark-blue mb-4 max-w-[1024px] mx-auto mt-8">
-          De onde vem a parceria?
-        </h3>
-
-        <div className="bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto mt-4">
-          <div className="flex-1 text-center md:text-left">
-            <p className="text-text-gray mb-4 text-base">
-              Durante nossas pesquisas com usuários,{" "}
-              <span className="font-bold">
-                percebemos que muitas pessoas relatam dificuldade em encontrar
-                informações reais e seguras sobre diabetes.
-              </span>
-            </p>
-            <p className="text-text-gray mb-4 text-base">
-              Por isso, convidamos Laura e Ana para disponibilizarem{" "}
-              <span className="font-bold">
-                vídeos do Canal Nunca Vi 1 Cientista aqui no Glicare
-              </span>
-              , na área{" "}
-              <span className="font-bold">de Conteúdo Confiável.</span>
-            </p>
-            <p className="text-text-gray mb-4 text-base">
-              Essa parceria tem como objetivo levar informação de qualidade,
-              baseada em ciência, para ajudar quem vive com diabetes a se
-              informar de forma clara, confiável e segura.
-            </p>
           </div>
         </div>
 
@@ -256,7 +273,7 @@ const AboutDiabetes = () => {
         />
 
         <div className="text-center mt-6">
-          <p className="text-gray-800 font-semibold text-base mb-2">
+          <p className="text-gray-800 font-semibold text-lg mb-2">
             Quer ver a playlist completa?
           </p>
           <Link
