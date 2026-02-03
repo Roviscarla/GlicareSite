@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
-import FilterButton from "@/app/components/ui/filter-button";
-import Button from "./ui/button";
-import YouTubeVideoCarousel from "@/app/components/ui/youtube-carousel";
-import { IYouTubeVideo } from "@/app/models/youtube.interface";
 import Link from "next/link";
+
+import Button from "./ui/button";
+import DiabetesCard from "./ui/card-diabetes";
+import YouTubeVideoCarousel from "@/app/components/ui/youtube-carousel";
+
+import { IYouTubeVideo } from "@/app/models/youtube.interface";
 
 const videosData: IYouTubeVideo[] = [
   {
@@ -40,50 +41,17 @@ const videosData: IYouTubeVideo[] = [
     channelName: "Nunca Vi 1 Cientista",
   },
   {
-    id: "lNiiaU6XL4k",
-    title: "Qual foi a primeira pessoa com diabetes no mundo?",
-    channelName: "Nunca Vi 1 Cientista",
-  },
-  {
     id: "TxaJvSw7NDs",
     title: "DIABETES: sintomas que você não sabia que existiam",
     channelName: "Nunca Vi 1 Cientista",
   },
 ];
 
-const createSlug = (text: string) => {
-  return text
-    .toLowerCase()
-    .replace(/ /g, "-")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-};
-
-const AboutDiabetes = () => {
-  const diabetesTypes = [
-    "Diabetes Tipo 1",
-    "Diabetes Tipo 2",
-    "Diabetes gestacional",
-  ];
-
+export default function AboutDiabetes() {
   return (
-    <section className=" bg-primary-gray py-12 px-4 md:px-8 lg:px-16">
-      <div className="max-w-5xl mx-auto ">
-        <h2 className="text-3xl font-bold text-dark-blue mb-6">
-          Conheça os tipos de diabetes:
-        </h2>
-
-        <div className="flex flex-wrap gap-3 mb-12">
-          {diabetesTypes.map((type) => {
-            const slug = createSlug(type);
-            return (
-              <Link key={type} href={`/sobre-diabetes/${slug}`} passHref>
-                <FilterButton label={type} />
-              </Link>
-            );
-          })}
-        </div>
-        <div className="mt-8 mb-8">
+    <section className="bg-primary-gray  px-4 md:px-8 lg:px-16">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-8">
           <div className="bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto">
             <div className="flex-1 text-center md:text-left">
               <h3 className="text-3xl font-bold text-dark-blue mb-4 max-w-[1024px] mx-auto">
@@ -140,6 +108,7 @@ const AboutDiabetes = () => {
           </div>
         </div>
 
+        {/* Seção de Parceria */}
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-dark-blue text-left mb-8">
             Ciência e Cuidado: Uma Parceria pela Sua Saúde
@@ -224,6 +193,7 @@ const AboutDiabetes = () => {
           </div>
         </div>
 
+        {/* Seção das Cientistas */}
         <div className="max-w-5xl mx-auto px-4 mt-12 mb-12">
           <h2 className="text-3xl font-bold text-dark-blue text-center mb-8">
             Quem são as cientistas
@@ -267,19 +237,20 @@ const AboutDiabetes = () => {
           </div>
         </div>
 
+        {/* Carrossel de Vídeos */}
         <YouTubeVideoCarousel
           videos={videosData}
           title="Confira abaixo a playlist especial com vídeos sobre diabetes:"
         />
 
-        <div className="text-center mt-6">
+        <div className="text-center mt-8 mb-8">
           <p className="text-gray-800 font-semibold text-lg mb-2">
             Quer ver a playlist completa?
           </p>
           <Link
-            href="https://www.youtube.com/channel/UCdKJlY5eAoSumIlcOcYxIGg/join"
+            href="https://www.youtube.com/@nuncavi1cientista"
             target="_blank"
-            className="text-dark-blue font-bold uppercase text-sm hover:underline inline-block"
+            className="text-dark-blue font-bold uppercase text-sm hover:underline"
           >
             Clique Aqui
           </Link>
@@ -287,6 +258,4 @@ const AboutDiabetes = () => {
       </div>
     </section>
   );
-};
-
-export default AboutDiabetes;
+}

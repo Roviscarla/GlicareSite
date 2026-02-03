@@ -28,12 +28,7 @@ const questionsToDoctor: IQuestions[] = [
       "Gere relatórios em PDF com o historico completo do paciente para análises e consultas.",
     id: 4,
   },
-  {
-    question: "📊 Acesso a Prontuários Completo",
-    response:
-      "Visualize e atualize os dados dos seus pacientes em poucos cliques, facilitando ajustes no tratamento.",
-    id: 5,
-  },
+
   {
     question: "🆘 Botão de emergência",
     response:

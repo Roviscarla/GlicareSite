@@ -102,7 +102,10 @@ export default function NossoApp() {
                   Quer mais informações?
                 </p>
                 <Link
-                  href="#"
+                  href="https://www.linkedin.com/groups/14722317/"
+                  target="_blank"
+                  rel="noopener
+                     noreferrer"
                   className="text-dark-blue font-bold uppercase text-sm hover:underline inline-block"
                 >
                   SAIBA MAIS
@@ -113,52 +116,54 @@ export default function NossoApp() {
 
           <div className="mt-16 bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto mb-8">
             <div className="flex-1 text-center md:text-left">
-              <h3 className=" text-3xl font-bold text-center text-dark-blue mb-4 max-w-[1024px] mx-auto">
+              <h2 className=" text-3xl font-bold text-center text-dark-blue mb-4 max-w-[1024px] mx-auto">
                 Criado por Quem Entende, Para Quem Precisa
-              </h3>
-              <p className="mt-8 text-text-gray mb-4 text-lg">
-                O Glicare nasceu da união de um time ágil, o Time Eclipse, e a
-                missão de transformar o controle do diabetes. Não criamos apenas
-                um app, criamos uma comunidade baseada em empatia e dados reais.
-              </p>
-              <p className="text-text-gray mb-4 text-lg">
-                Nossos times de Produto e UX ouviram ativamente pessoas com
-                diabetes e profissionais de saúde para mapear as funcionalidades
-                essenciais. A Lean Inception garantiu que o produto resolvesse
-                os problemas mais urgentes da sua rotina.
-              </p>
-              <p className="text-text-gray mb-4 text-lg">
-                Com o Glicare, você tem o controle na palma da mão, pronto para
-                exportar e levar ao seu médico. Alertas personalizados que
-                combatem o esquecimento das medições. Controle total de
-                dependentes para garantir tranquilidade a quem cuida.
-              </p>
-              {/* <h3 className="text-lg font-semibold text-center text-text-gray mb-4">
+              </h2>
+              <p className="text-xl font-bold text-center text-text-gray mb-4 max-w-[1024px] mx-auto">
                 Nossa Jornada: A Comunidade Glicare
-              </h3> */}
-              <p className="text-text-gray mb-4 text-lg">
-                O Glicare nasceu da união de um time ágil, o Time Eclipse, e a
-                missão de transformar o controle do diabetes em uma jornada mais
-                leve, segura e eficiente. Não criamos apenas um app; criamos uma
-                comunidade baseada em empatia e dados reais.
+              </p>
+              <p className="mt-8 text-text-gray mb-4 text-lg">
+                O Glicare nasceu em <strong>2025</strong>, fruto da energia de
+                um time ágil determinado a transformar o controle do diabetes em
+                uma experiência mais leve, segura e eficiente.
               </p>
               <p className="text-text-gray mb-4 text-lg">
-                Do Conceito ao MVP: Para garantir que o Glicare entregasse valor
-                real desde o início, Nosso time realizou a Lean Inception. na
-                descoberta, definimos a Visão do Produto e o que ele é, não é,
-                faz e não faz.
+                Uma das motivações para a construção do aplicativo baseia-se em
+                histórias reais. Foi através dos participantes da{" "}
+                <strong>Comunidade Glicare</strong> que realizamos entrevistas
+                onde pessoas compartilharam as dores e vivências de amigos e
+                familiares que convivem com o diabetes.
               </p>
               <p className="text-text-gray mb-4 text-lg">
-                Esse processo não apenas alinhou a equipe, mas nos permitiu
-                criar um MVP (Produto Mínimo Viável) focado na essência da sua
-                necessidade.
+                Ao acompanhar de perto a rotina e as dificuldades relatadas por
+                eles, encontramos o propósito de criar uma solução capaz de
+                ajudar não apenas a eles, mas a todos que enfrentam a doença
+                diariamente.
               </p>
+
+              <div className="flex justify-center mt-6">
+                <Link
+                  href="https://www.linkedin.com/groups/14722317/"
+                  target="_blank"
+                  className="
+                        bg-dark-blue
+                        text-white
+                        text-md
+                        font-bold
+                        px-5 py-2
+                        rounded-lg
+                        hover:bg-blue-700
+                        transition
+                        duration-200
+                        text-center
+                        whitespace-nowrap
+    "
+                >
+                  Faça parte da comunidade
+                </Link>
+              </div>
             </div>
           </div>
-
-          {/* <div className="mt-16 bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto mb-8">
-            <div className="flex-1 text-center md:text-left"></div>
-          </div> */}
 
           <div className="max-w-5xl mx-auto px-4 mt-12">
             <h2 className="text-3xl font-bold text-dark-blue text-center mb-8">

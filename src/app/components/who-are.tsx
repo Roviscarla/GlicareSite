@@ -15,8 +15,8 @@ const collaborators: ICollaborators[] = [
   {
     id: 1,
     name: "Carla Rovis",
-    function: "Product Owner",
-    job: "Product Owner",
+    function: "Product Manager",
+    job: "Product Manager",
     linkedin: "https://www.linkedin.com/in/carla-rovis",
     web: "portfólio",
     image: "/image/collaborators/Carla-Rovis.jpeg",

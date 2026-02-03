@@ -1,7 +1,6 @@
 import IconGlicare from "@/public/svg/icon-glicare-light";
-import IconPhone from "@/public/svg/icon-phone-white";
-import IconWhatsApp from "@/public/svg/icon-whatsapp-white";
-import IconEmail from "@/public/svg/icon-email-white";
+import { FiMail, FiAlertCircle } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -35,7 +34,7 @@ export default function Footer() {
               </a>
             </p>
 
-            <p className="text-sm pt-4">2025 © Glicare</p>
+            <p className="text-sm pt-4">© 2026 Glicare • v2.0</p>
           </div>
 
           <div className="space-y-6 md:text-left">
@@ -72,11 +71,11 @@ export default function Footer() {
 
             <div className="flex gap-4 md:justify-start">
               <a
-                href="tel:+5500000000000"
+                href="mailto:contato@glicareapp.com.br?subject=Contato Glicare&body=Olá equipe Glicare,%0D%0A%0D%0ADescreva seu problema:"
                 className="hover:opacity-80 transition-opacity"
                 aria-label="Telefone"
               >
-                <IconPhone className="w-5 h-5" />
+                <FiMail className="w-5 h-5" />
               </a>
               <a
                 href="https://wa.me/5500000000000"
@@ -85,14 +84,14 @@ export default function Footer() {
                 className="hover:opacity-80 transition-opacity"
                 aria-label="WhatsApp"
               >
-                <IconWhatsApp className="w-5 h-5" />
+                <FaWhatsapp className="w-5 h-5" />
               </a>
               <a
-                href="mailto:contato@glicare.com"
+                href="mailto:suporte@glicareapp.com.br?subject=Suporte Glicare&body=Olá equipe Glicare,%0D%0A%0D%0ADescreva seu problema:"
                 className="hover:opacity-80 transition-opacity"
                 aria-label="Email"
               >
-                <IconEmail className="w-5 h-5" />
+                <FiAlertCircle className="w-5 h-5" />
               </a>
             </div>
           </div>
