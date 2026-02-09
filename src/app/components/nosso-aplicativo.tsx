@@ -27,7 +27,7 @@ export default function NossoApp() {
 
       <section className="bg-gray-100 pt-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
+          {/* <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
             <div className="flex flex-col items-center">
               <div className="mb-8 mt-16">
                 <Image
@@ -112,9 +112,9 @@ export default function NossoApp() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="mt-16 bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto mb-8">
+          <div className=" bg-header-background rounded-xl p-6 sm:p-8  shadow-lg max-w-[1024px] mx-auto mb-8">
             <div className="flex-1 text-center md:text-left">
               <h2 className=" text-3xl font-bold text-center text-dark-blue mb-4 max-w-[1024px] mx-auto">
                 Criado por Quem Entende, Para Quem Precisa
