@@ -36,7 +36,7 @@ const ContactSection = () => {
           </a>
 
           <a
-            //href="https://wa.me/5512345678901"
+            href="https://wa.me/5511990184788"
             onClick={openModal}
             target="_blank"
             rel="noopener noreferrer"

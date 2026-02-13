@@ -78,7 +78,7 @@ export default function Footer() {
                 <FiMail className="w-5 h-5" />
               </a>
               <a
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/5511990184788"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
