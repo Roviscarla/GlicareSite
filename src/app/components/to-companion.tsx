@@ -12,7 +12,7 @@ const questionsToDoctor: IQuestions[] = [
   {
     question: "🔔 Alertas Personalizados",
     response:
-      "Personalize lembretes para seus pacientes sobre medicamentos, exames ou consultas.",
+      "Envie lembretes automaticos para seus pacientes sobre medicamentos, exames ou consultas.",
     id: 2,
   },
   {
@@ -28,7 +28,12 @@ const questionsToDoctor: IQuestions[] = [
       "Gere relatórios em PDF com o historico completo do paciente para análises e consultas.",
     id: 4,
   },
-
+  {
+    question: "📊 Acesso a Prontuários Completo",
+    response:
+      "Visualize e atualize os dados dos seus pacientes em poucos cliques, facilitando ajustes no tratamento.",
+    id: 5,
+  },
   {
     question: "🆘 Botão de emergência",
     response:
@@ -37,26 +42,14 @@ const questionsToDoctor: IQuestions[] = [
   },
 ];
 
-export default function ToDoctors() {
+export default function ToCompanions() {
   return (
     <section className="px-6 pt-6 lg:px-20 md:pt-32 lg:pt-16 xl:pb-4">
-      <div className="mb-16">
-        <h1 className="font-medium text-xl text-gray-dark pb-4 pl-4">
-          Nosso aplicativo
-        </h1>
-        <p className="text-secondary-gray pl-4 text-lg pr-20 md:text-xl ">
-          O Glicare é um aplicativo desenvolvido para simplificar o cuidado com
-          o diabetes. Pacientes, médicos, nutricionistas e outros profissionais
-          de saúde encontram aqui uma forma prática e acessível de acompanhar a
-          evolução da doença, monitorar sintomas e promover mais qualidade de
-          vida.
-        </p>
-      </div>
       <div className="bg-white rounded-3xl relative md:grid md:grid-cols-2">
         <span className="md:col-start-1"></span>
         <span className="hidden md:block md:absolute md:-top-8 md:left-16 md:mt-16 xl:mt-0">
           <Image
-            src={"/image/smartphone-left.png"}
+            src={"/image/glicareAppImage.png"}
             width={365}
             height={692}
             alt="smartphone"
@@ -67,7 +60,7 @@ export default function ToDoctors() {
         <div className="lg:pr-2">
           <div className="pt-6 pl-6 pb-9 pr-14">
             <h2 className="font-medium text-2xl text-primary pb-4">
-              Para profissionais da saúde
+              Para Acompanhantes
             </h2>
             <p className="text-secondary-gray pr-8 md:pr-4">
               O Glicare foi desenvolvido para{" "}

@@ -8,7 +8,7 @@ export function Button({
   type = "button",
 }: ButtonProps) {
   const classMain =
-    "xl:bg-blue-500 xl:hover:bg-blue-700 text-white font-bold py-2 px-4 rounded";
+    "xl:bg-dark-blue xl:hover:bg-blue-500 text-white font-bold py-2 px-4 rounded";
 
   return (
     <button

@@ -23,11 +23,11 @@ export default function Contact() {
         id="contatos"
         className="w-full flex-shrink-0 bg-primary-gray lg:px-20"
       >
-        <div className="pb-16 px-6 text-left">
-          <h2 className="w-full pr-14 pl-4 text-2xl md:text-28 font-medium text-gray-dark">
+        <div className="pb-16 px-6 text-center">
+          <h2 className="text-2xl md:text-28 font-medium text-gray-dark">
             Entre em contato com o Glicare
           </h2>
-          <p className="w-full pl-4 sm:w-700 md:w-624 mt-4 md:mt-6 pr-16 text-secondary-gray text-left text-lg md:text-xl font-normal leading-tight">
+          <p className="mt-4 md:mt-6  text-secondary-gray text-center text-lg md:text-xl font-normal">
             Caso ainda tenha dúvidas ou esteja com problema para utilizar o
             Glicare, você pode entrar em contato conosco abaixo:
           </p>

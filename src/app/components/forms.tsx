@@ -54,7 +54,7 @@ const FormularioPreCadastro = () => {
   return (
     <section
       id="junte-se"
-      className="bg-gray-100 py-12 md:py-20 flex items-center justify-center"
+      className="bg-gray-100 py-12 md:py-20 flex items-center justify-center mt-16"
     >
       <div className="w-full max-w-2xl mx-auto px-4">
         <div className="text-center mb-8">

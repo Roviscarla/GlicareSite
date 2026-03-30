@@ -1,17 +1,27 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Button from "@/app/components/ui/button";
 import NavigationMenu from "@/public/svg/navigation-menu";
 import LogoGlicare from "@/public/svg/icon-glicare-dark";
 import ModalWarning from "./ui/modal-warning";
+import Link from "next/link";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const pathname = usePathname();
 
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
+
+  const navItems = [
+    { href: "/nosso-aplicativo", label: "Nosso aplicativo" },
+    { href: "/sobre-diabetes", label: "Sobre diabetes" },
+    { href: "/quem-somos", label: "Quem somos" },
+    { href: "/contatos", label: "Entre na Comunidade" },
+  ];
 
   return (
     <>
@@ -21,10 +31,12 @@ export default function Header() {
         onClose={closeModal}
       />
       <header>
-        <nav className="fixed top-0 left-0 w-full z-50 bg-primary-gray h-24 flex justify-between items-center p-4 lg:h-28 lg:p-10">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-header-background h-24 flex justify-between items-center p-4 lg:h-28 lg:p-10">
           <div className="flex gap-4 ml-14 items-center text-black">
             <LogoGlicare />
-            <p className="font-roboto font-semibold text-4xl">Glicare</p>
+            <Link href="/" className="font-roboto font-semibold text-2xl">
+              Glicare
+            </Link>
           </div>
           <Button
             classAttributes="xl:hidden bg-transparent"
@@ -33,26 +45,33 @@ export default function Header() {
             <NavigationMenu />
           </Button>
           <ul className="hidden xl:flex justify-around text-gray gap-12 font-inter font-medium text-base list-none px-18">
-            <li className="hover:text-blue-500 ">
-              <a href="#app">Nosso aplicativo</a>
-            </li>
-            <li className="hover:text-blue-500 ">
-              <a href="#junte-se">Entre na comunidade</a>
-            </li>
-            <li className="hover:text-blue-500 ">
-              <a href="#sobre">Sobre diabetes</a>
-            </li>
-            <li className="hover:text-blue-500">
-              <a href="#contatos">Contatos</a>
-            </li>
-            <li className="hover:text-blue-500 ">
-              <a href="#quem-somos">Quem somos</a>
-            </li>
+            {navItems.map((item) => {
+              const isActive =
+                pathname === item.href ||
+                (item.href === "/sobre-diabetes" &&
+                  pathname.startsWith("/sobre-diabetes/"));
+
+              return (
+                <li key={item.href} className="hover:text-blue-500">
+                  <Link
+                    href={item.href}
+                    className={`transition-colors duration-200 ${
+                      isActive
+                        ? "text-dark-blue font-bold"
+                        : "text-gray font-medium"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
+
           <div className="hidden xl:flex gap-4">
             <Button
               onClick={openModal}
-              classAttributes="w-40 h-12 bg-primary font-semibold text-white font-inter rounded-lg mr-14"
+              classAttributes="w-40 h-12 bg-dark-blue font-semibold text-white font-inter rounded-lg mr-14"
             >
               Baixe o Glicare
             </Button>
@@ -69,21 +88,25 @@ export default function Header() {
                   : "opacity-0 scale-95 pointer-events-none"
               }`}
           >
-            <a href="#app" onClick={() => setMenuOpen(false)}>
-              Nosso aplicativo
-            </a>
-            <a href="#depoimentos" onClick={() => setMenuOpen(false)}>
-              Depoimentos
-            </a>
-            <a href="#sobre" onClick={() => setMenuOpen(false)}>
-              Sobre diabetes
-            </a>
-            <a href="#contatos" onClick={() => setMenuOpen(false)}>
-              Contatos
-            </a>
-            <a href="#quem-somos" onClick={() => setMenuOpen(false)}>
-              Quem somos
-            </a>
+            {navItems.map((item) => {
+              const isActive =
+                pathname === item.href ||
+                (item.href === "/sobre-diabetes" &&
+                  pathname.startsWith("/sobre-diabetes/"));
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`${
+                    isActive ? "text-primary font-bold" : "font-medium"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
         </nav>
       </header>
