@@ -12,6 +12,21 @@ export default function CallToDownload() {
 
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
+
+  const handleMobileDownload = () => {
+    const isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isApple) {
+      openModal();
+    } else {
+      window.open(
+        "https://play.google.com/store/apps/details?id=com.projetoglicday.glicare",
+        "_blank",
+        "noopener,noreferrer",
+      );
+    }
+  };
+
   return (
     <>
       <ModalWarning
@@ -22,7 +37,7 @@ export default function CallToDownload() {
       <section className="pt-28 lg:px-8">
         <div className="flex items-end mx-8 rounded-3xl bg-gradient-background h-full lg:pt-20 lg:mx-16">
           <div className="flex flex-col justify-between px-4 pt-10 gap-16 text-center h-full md:pl-16 md:pr-16 lg:pl-4 lg:items-center lg:flex-row lg:text-start">
-            <div className="flex flex-col lg:gap-6 font-inter lg:px-10  ">
+            <div className="flex flex-col lg:gap-6 font-inter lg:px-10">
               <div className="flex flex-col gap-4">
                 <a
                   href="#junte-se"
@@ -50,33 +65,34 @@ export default function CallToDownload() {
                 <div className="flex gap-2 lg:justify-center xl:justify-start">
                   <a
                     className="pb-8 xl:pb-0 transition-transform duration-200 ease-out hover:scale-110"
-                    //href="https://play.google.com/store"
-                    onClick={openModal}
+                    href="https://play.google.com/store/apps/details?id=com.projetoglicday.glicare"
                     aria-label="Baixar na Play Store"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <IconPlayStore />
                   </a>
-                  <a
+                  <button
                     className="pb-8 transition-transform duration-200 ease-out hover:scale-110"
-                    //href="https://apps.apple.com"
                     onClick={openModal}
                     aria-label="Baixar na Apple Store"
-                    target="_blank"
                   >
                     <IconAppleStore />
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
+
+            {/* Botão para Mobile */}
             <div className="lg:hidden pb-10">
               <Button
-                onClick={openModal}
-                classAttributes="bg-primary w-full hover:bg-blue-700 "
+                onClick={handleMobileDownload}
+                classAttributes="bg-primary w-full hover:bg-blue-700"
               >
                 Baixe o Glicare
               </Button>
             </div>
+
             <div className="hidden xl:flex justify-center mr-12 -mt-4">
               <Image
                 src="/image/Dr-Glico-hero-page.png"

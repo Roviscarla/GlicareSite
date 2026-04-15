@@ -16,6 +16,20 @@ export default function Header() {
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
 
+  const handleMobileDownload = () => {
+    const isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isApple) {
+      openModal();
+    } else {
+      window.open(
+        "https://play.google.com/store/apps/details?id=com.projetoglicday.glicare",
+        "_blank",
+        "noopener,noreferrer",
+      );
+    }
+  };
+
   const navItems = [
     { href: "/nosso-aplicativo", label: "Nosso aplicativo" },
     { href: "/sobre-diabetes", label: "Sobre diabetes" },
@@ -70,8 +84,8 @@ export default function Header() {
 
           <div className="hidden xl:flex gap-4">
             <Button
-              onClick={openModal}
-              classAttributes="w-40 h-12 bg-dark-blue font-semibold text-white font-inter rounded-lg mr-14"
+              onClick={handleMobileDownload}
+              classAttributes="bg-primary w-full hover:bg-blue-700"
             >
               Baixe o Glicare
             </Button>

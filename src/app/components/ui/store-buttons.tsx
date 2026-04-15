@@ -27,8 +27,7 @@ export default function StoreButtonsDark({
         <a
           target="_blank"
           className="lg:hidden"
-          //href="https://play.google.com/store"
-          onClick={openModal}
+          href="https://play.google.com/store/apps/details?id=com.projetoglicday.glicare"
           aria-label="Baixar na Play Store"
           rel="noopener noreferrer"
         >
@@ -48,8 +47,7 @@ export default function StoreButtonsDark({
         <a
           target="_blank"
           className="hidden lg:block transition-transform duration-200 ease-out hover:scale-110"
-          //href="https://play.google.com/store"
-          onClick={openModal}
+          href="https://play.google.com/store/apps/details?id=com.projetoglicday.glicare"
           aria-label="Baixar na Play Store"
           rel="noopener noreferrer"
         >
